@@ -12,7 +12,6 @@ Dataset_split/
 runs/
 
 # Model weights
-*.pt
 *.pth
 *.onnx
 *.engine
@@ -22,3 +21,10 @@ runs/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# AgriVisionAI
+PlantDoc-Dataset/
+backend/uploads/
+
+# YOLO weights
+backend/*.pt

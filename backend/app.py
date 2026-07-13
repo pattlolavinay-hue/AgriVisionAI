@@ -17,7 +17,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 # -------------------------------
 # Load recommendations
 # -------------------------------
-with open("recommendation.json", "r") as f:
+with open(os.path.join(BASE_DIR,"recommendation.json"), "r") as f:
     recommendations = json.load(f)
 
 # -------------------------------
@@ -34,51 +34,111 @@ def home():
 # -------------------------------
 @app.route("/upload", methods=["POST"])
 def upload():
+
     try:
+
         if "image" not in request.files:
-            return jsonify({"success": False, "error": "No image uploaded"}), 400
+            return jsonify({
+                "success": False,
+                "error": "No image uploaded"
+            }), 400
+
 
         image = request.files["image"]
 
-        if image.filename == "":
-            return jsonify({"success": False, "error": "Empty filename"}), 400
 
-        filepath = os.path.join(UPLOAD_FOLDER, image.filename)
+        if image.filename == "":
+            return jsonify({
+                "success": False,
+                "error": "Empty filename"
+            }), 400
+
+
+
+        filepath = os.path.join(
+            UPLOAD_FOLDER,
+            image.filename
+        )
+
         image.save(filepath)
+
 
         print("Image saved:", filepath)
 
+
+
+        # YOLO prediction
         prediction = predict_disease(filepath)
+
         print("Prediction:", prediction)
+
+
 
         disease = prediction["disease"]
 
+
+
+        # Search recommendation
         recommendation = recommendations.get(
             disease,
-            {
-                "status": disease,
-                "severity": "Unknown",
-                "treatment": "No recommendation available."
-            }
+            {}
         )
 
-        print("Recommendation:", recommendation)
+
+        final_recommendation = {
+
+            "status": recommendation.get(
+                "status",
+                disease
+            ),
+
+            "severity": recommendation.get(
+                "severity",
+                "Unknown"
+            ),
+
+            "treatment": recommendation.get(
+                "treatment",
+                "No recommendation available."
+            )
+
+        }
+
+
+        print("Recommendation:", final_recommendation)
+
+
 
         return jsonify({
+
             "success": True,
+
             "filename": image.filename,
+
+
             "prediction": {
-                "disease": recommendation["status"],
+
+                "disease": final_recommendation["status"],
+
                 "confidence": prediction["confidence"]
+
             },
-            "recommendation": recommendation
+
+
+            "recommendation": final_recommendation
+
         })
 
-    except Exception as e:
-        import traceback
-        traceback.print_exc()
-        return jsonify({"error": str(e)}), 500
 
+    except Exception as e:
+
+        import traceback
+
+        traceback.print_exc()
+
+        return jsonify({
+            "error": str(e)
+        }),500
 # -------------------------------
 # Run Flask
 # -------------------------------
