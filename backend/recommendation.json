@@ -1,0 +1,115 @@
+{
+  "Apple___Apple_scab": {
+    "status": "Apple Scab",
+    "severity": "Medium",
+    "treatment": "Remove infected leaves, improve air circulation, and apply appropriate fungicide such as Captan or Mancozeb."
+  },
+
+  "Apple___Black_rot": {
+    "status": "Apple Black Rot",
+    "severity": "High",
+    "treatment": "Remove infected fruits and branches, prune affected areas, and apply recommended fungicide."
+  },
+
+  "Apple___Cedar_apple_rust": {
+    "status": "Apple Cedar Apple Rust",
+    "severity": "Medium",
+    "treatment": "Remove infected leaves and apply suitable fungicide during early infection stages."
+  },
+
+  "Apple___healthy": {
+    "status": "Healthy Apple",
+    "severity": "Low",
+    "treatment": "No treatment required. Continue regular monitoring and maintain proper plant nutrition."
+  },
+
+  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+    "status": "Corn Gray Leaf Spot",
+    "severity": "Medium",
+    "treatment": "Remove infected plant debris, maintain crop spacing, and apply suitable fungicide if required."
+  },
+
+  "Corn_(maize)___Common_rust_": {
+    "status": "Corn Common Rust",
+    "severity": "Medium",
+    "treatment": "Apply recommended fungicide, use resistant varieties, and maintain proper field management."
+  },
+
+  "Corn_(maize)___healthy": {
+    "status": "Healthy Corn",
+    "severity": "Low",
+    "treatment": "No treatment required. Maintain proper irrigation and nutrient management."
+  },
+
+  "Corn_(maize)___Northern_Leaf_Blight": {
+    "status": "Corn Northern Leaf Blight",
+    "severity": "High",
+    "treatment": "Remove infected leaves, use resistant varieties, and apply suitable fungicide."
+  },
+
+  "Pepper__bell___Bacterial_spot": {
+    "status": "Bell Pepper Bacterial Spot",
+    "severity": "High",
+    "treatment": "Apply copper-based bactericide, remove infected leaves, and avoid overhead irrigation."
+  },
+
+  "Pepper__bell___healthy": {
+    "status": "Healthy Bell Pepper",
+    "severity": "Low",
+    "treatment": "No treatment required. Continue regular monitoring."
+  },
+
+  "Potato___Early_blight": {
+    "status": "Potato Early Blight",
+    "severity": "Medium",
+    "treatment": "Apply Mancozeb or Chlorothalonil fungicide and remove infected foliage."
+  },
+
+  "Potato___Late_blight": {
+    "status": "Potato Late Blight",
+    "severity": "High",
+    "treatment": "Apply appropriate fungicide immediately, remove infected plants, and avoid excess moisture."
+  },
+
+  "Potato___healthy": {
+    "status": "Healthy Potato",
+    "severity": "Low",
+    "treatment": "No treatment required. Maintain proper soil nutrients and irrigation."
+  },
+
+  "Tomato_Bacterial_spot": {
+    "status": "Tomato Bacterial Spot",
+    "severity": "High",
+    "treatment": "Use copper-based bactericide, remove infected leaves, and avoid wet foliage."
+  },
+
+  "Tomato_Early_blight": {
+    "status": "Tomato Early Blight",
+    "severity": "Medium",
+    "treatment": "Apply Mancozeb or Chlorothalonil fungicide and remove affected leaves."
+  },
+
+  "Tomato_Late_blight": {
+    "status": "Tomato Late Blight",
+    "severity": "High",
+    "treatment": "Apply Metalaxyl-based fungicide, isolate infected plants, and improve ventilation."
+  },
+
+  "Tomato_Leaf_Mold": {
+    "status": "Tomato Leaf Mold",
+    "severity": "Medium",
+    "treatment": "Improve greenhouse ventilation, reduce humidity, and apply suitable fungicide."
+  },
+
+  "Tomato_Septoria_leaf_spot": {
+    "status": "Tomato Septoria Leaf Spot",
+    "severity": "Medium",
+    "treatment": "Remove infected leaves, avoid overhead watering, and apply Chlorothalonil fungicide."
+  },
+
+  "Tomato_Spider_mites_Two_spotted_spider_mite": {
+    "status": "Tomato Two-Spotted Spider Mites",
+    "severity": "High",
+    "treatment": "Apply neem oil or recommended miticide and monitor pest population regularly."
+  }
+}
